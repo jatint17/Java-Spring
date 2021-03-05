@@ -1,6 +1,5 @@
 package spring.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -17,8 +16,6 @@ public class Employee
 	private String businessUnit;
 	@Value("${employee.age}")
 	private int age;
-	
-	private SBU bu;
 
 	public Employee() {}
 	
@@ -29,21 +26,6 @@ public class Employee
 		this.salary=salary;
 		this.businessUnit=businessUnit;
 		this.age=age;
-	}
-	
-	public SBU getBu() {
-		return bu;
-	}
-
-	public void setBu(SBU bu) {
-		this.bu = bu;
-	}
-	
-	@Autowired
-	public SBU getSbuDetails()
-	{
-		bu = new SBU();
-		return bu;
 	}
 	
 	public int getEmployeeId() {

@@ -12,12 +12,12 @@ public class DemoMain {
 		context.refresh();
 		Employee employee = context.getBean(Employee.class);
 		System.out.println("Employee details");
-		System.out.println("-----------------------");
-		System.out.print("Employee "+" [empAge = "+employee.getAge()+" empId = "+employee.getEmployeeId()+
-				" empName = "+employee.getEmployeeName()+" empSalary = "+employee.getSalary()+
-				" SBU details = "+context.getBean(SBU.class)+"]");
-
-
+		System.out.println("----------------------");
+		System.out.println("Employee Id : "+employee.getEmployeeId());
+		System.out.println("Employee Name : "+employee.getEmployeeName());
+		System.out.println("Employee Salary : "+employee.getSalary());
+		System.out.println("Employee BU : "+employee.getBusinessUnit());
+		System.out.println("Employee Age : "+employee.getAge());
 	}
 
 }
